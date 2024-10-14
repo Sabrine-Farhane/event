@@ -1,13 +1,724 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/HomePage.css */
+
+/* Event Navbar */
+.event-navbar {
+  background-color: #88A649;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.event-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
+
+.event-navbar li {
+  margin: 0 15px;
+}
+
+.event-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+ 
+}
+
+.event-navbar a:hover {
+  color: #f0f0f0;
+}
+
+/* Main Navbar - no space between event-navbar and main navbar */
+.navbar {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 40px; /* No space between navbars */
+  width: 100%;
+  z-index: 999;
+}
+
+.logo {
+  height: 45px;
+  margin-right: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+/* Navbar hover effect */
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-started-btn {
+  background-color: transparent; /* Transparent background */
+  color: #88A649; /* Green text */
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 50px;
+  border: 2px solid #88A649; /* Green border */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: transparent; /* Keep background transparent */
+  border: 2px solid #88A649; /* Keep the border color */
+  box-shadow: 0px 4px 10px rgba(136, 166, 73, 0.5); /* Add shadow on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+
+
+.header {
+  padding: 90px 20px;
+}
+
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .get-started-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+}
+/* src/HomePage.css */
+
+/* ... existing styles ... */
+
+/* Animated Content Section */
+.animated-content {
+  padding: 20px;
+  margin-top: 60px; /* Increased margin for spacing from the navbars */
+  text-align: center; /* Center text for smaller screens */
+}
+
+.content-flex {
+  display: flex; /* Use flexbox to align items */
+  align-items: flex-start; /* Align items at the start */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between text and images */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.main-title {
+  font-size: 32px; /* Increased font size for prominence */
+  font-weight: bold; /* Make it bold */
+  color: #88A649; /* Match the theme */
+  margin-bottom: 20px; /* Space below the title */
+  width: 100%; /* Ensure it takes full width */
+ 
+}
+
+.impact-text {
+  font-size: 20px; /* Increased font size for better visibility */
+  margin-right: 20px; /* Space between the text and images */
+  white-space: normal; /* Allow text to wrap */
+  flex: 1; /* Allow text to take available space */
+  max-width: 500px; /* Optional: limit width to prevent overflow */
+}
+
+/* Image Container */
+.image-container {
+  display: flex; /* Align images side by side */
+  justify-content: center; /* Center images */
+}
+
+.fixed-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Maintain aspect ratio */
+  margin: 0 10px; /* Spacing between images */
+}
+
+/* ... existing styles ... */
+/* src/HomePage.css */
+
+/* ... existing styles ... */
+
+/* Video Container */
+.video-container {
+  flex: 1; /* Allow the video to take available space */
+  display: flex;
+  justify-content: center; /* Center video */
+}
+
+iframe {
+  width: 100%; /* Make it responsive */
+  max-width: 320px; /* Limit maximum width */
+  height: 180px; /* Height for video */
+}
+
+
+
+.video {
+  width: 150px; /* Match the size of the images */
+  height: 150px; /* Set a fixed height */
+  margin-left: 10px; /* Spacing to the left of the video */
+}
+/* src/HomePage.css */
+
+/* ... existing styles ... */
+
+/* Info Container */
+.info-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items */
+  align-items: flex-start; /* Align items to the top */
+  padding: 40px 20px; /* Add padding */
+}
+
+/* Set all sections to have the same flex-basis */
+.what-we-do, .growth-journey, .sponsor-section {
+  flex: 1; /* Allow them to grow equally */
+  padding: 20px; /* Add padding */
+  background-color: #f9f9f9; /* Light background */
+  margin-right: 10px; /* Space between sections */
+  min-width: 0; /* Prevent overflow */
+}
+
+/* Prevent last item from having margin on right */
+.sponsor-section {
+  margin-right: 0; /* Remove right margin from the last section */
+}
+
+/* What We Do Section */
+.what-we-do h2 {
+  font-size: 28px; /* Title size */
+  font-weight: bold; /* Make it bold */
+  color: #88A649; /* Match the theme color */
+}
+
+/* Growth Journey Section */
+.growth-journey h3 {
+  font-size: 24px; /* Subtitle size */
+  color: #88A649; /* Change color to match theme */
+  font-weight: bold; /* Make it bold */
+}
+
+/* Sponsor Section */
+.sponsor-section h3 {
+  font-size: 24px; /* Subtitle size */
+  color: #88A649; /* Match the theme color */
+  font-weight: bold; /* Make it bold */
+}
+
+/* ... existing styles ... */
+/* src/HomePage.css */
+
+/* ... existing styles ... */
+
+/* Info Container */
+.info-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items */
+  align-items: stretch; /* Stretch items to be the same height */
+  padding: 40px 20px; /* Add padding */
+}
+
+/* Set all sections to have the same flex-basis and border */
+.what-we-do, .growth-journey, .sponsor-section {
+  flex: 1; /* Allow them to grow equally */
+  padding: 20px; /* Add padding */
+  background-color: #f9f9f9; /* Light background */
+  margin-right: 10px; /* Space between sections */
+  min-width: 0; /* Prevent overflow */
+  border: 2px solid #88A649; /* Add a uniform border */
+  border-radius: 5px; /* Optional: add rounded corners */
+}
+
+/* Prevent last item from having margin on right */
+.sponsor-section {
+  margin-right: 0; /* Remove right margin from the last section */
+}
+.sponsor-logos {
+  display: flex; /* Align logos horizontally */
+  justify-content: center; /* Center logos */
+}
+
+.sponsor-logo {
+  width: 100px; /* Set logo width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between logos */
+}
+
+/* What We Do Section */
+.what-we-do h2 {
+  font-size: 28px; /* Title size */
+  font-weight: bold; /* Make it bold */
+  color: #88A649;
+  animation: glow 1.5s infinite alternate; 
+  /* Match the theme color */
+}
+
+/* Growth Journey Section */
+.growth-journey h3 {
+  font-size: 24px; /* Subtitle size */
+  color: #88A649; /* Change color to match theme */
+  font-weight: bold; 
+  animation: glow 1.5s infinite alternate;/* Make it bold */
+}
+
+/* Sponsor Section */
+.sponsor-section h3 {
+  font-size: 24px; /* Subtitle size */
+  color: #88A649; /* Match the theme color */
+  font-weight: bold; 
+  animation: glow 1.5s infinite alternate;/* Make it bold */
+}
+
+/* ... existing styles ... */
+/* src/HomePage.css */
+
+/* ... existing styles ... */
+
+/* Collaborative Section */
+.collaborative-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items */
+  align-items: stretch; /* Align items to stretch equally */
+  padding: 40px 20px; /* Add padding */
+}
+
+/* Each Card Style */
+.container {
+  display: flex; /* Use flexbox for cards */
+  justify-content: space-between; /* Space out cards */
+  width: 100%; /* Full width */
+}
+
+.startup, .investor, .entrepreneur {
+  flex: 1; /* Allow them to grow equally */
+  padding: 20px; /* Add padding */
+  margin: 0 10px; /* Space between sections */
+  background-color: #f9f9f9; /* Light background */
+  border: 2px solid #88A649; /* Uniform border */
+  border-radius: 20px; /* Non-rectangular shape */
+  position: relative; /* For positioning */
+  min-height: 200px; /* Ensure equal height */
+}
+
+.startup h3, .investor h3, .entrepreneur h3 {
+  color: #88A649; /* Match theme color */
+  text-align: center; /* Center text */
+  animation: glow 1.5s infinite alternate; /* Add glow animation */
+}
+
+/* Resize Images */
+.startup-image, .investor-image, .entrepreneur-image {
+  width: 60%; /* Set a smaller size for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Round corners */
+  display: block; /* Make images block elements */
+  margin: 0 auto; /* Center images */
+}
+
+.startup p, .investor p, .entrepreneur p {
+  text-align: center; /* Center paragraph text */
+  margin-top: 10px; /* Spacing from the image */
+}
+
+/* Animation for glowing effect */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #88A649, 0 0 20px #88A649, 0 0 30px #88A649;
+  }
+  100% {
+    text-shadow: 0 0 20px #88A649, 0 0 30px #88A649, 0 0 40px #88A649;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: white; /* White background */
+  color: black; /* Change text color to black for contrast */
+  padding: 20px; /* Padding for the footer */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  border: 1px solid #ccc; /* Light gray border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.footer-content {
+  display: flex; /* Use flexbox for footer content */
+  flex: 1; /* Allow flexibility */
+}
+
+.contact-info, .quick-links, .services, .newsletter {
+  flex: 1; /* Equal width */
+  margin: 10px; /* Margin around sections */
+}
+
+.social-links a {
+  margin-right: 10px; /* Space between social links */
+  color: black; /* Black text color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+h4 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.newsletter input {
+  padding: 5px; /* Padding for input */
+  margin-top: 10px; /* Space above input */
+}
+
+.newsletter button {
+  background-color: #88A649; /* Button color */
+  color: white; /* Button text color */
+  padding: 5px 10px; /* Button padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.newsletter button:hover {
+  background-color: #6e9a38; /* Darker shade on hover */
+}
+
+/* Gallery styles */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Increased height */
+}
+
+.gallery-item {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-img {
+  width: 400px; /* Increased image size */
+  height: 200px;
+  border: 5px solid #6e9a38; /* Green border */
+  border-radius: 10px;
+}
+
+.ewb-team {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6e9a38;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animated title */
+.animated-title {
+  font-size: 2.5rem;
+  color: #6e9a38;
+  
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #6e9a38, 0 0 10px #6e9a38, 0 0 15px #6e9a38;
+  }
+  to {
+    text-shadow: 0 0 20px #6e9a38, 0 0 30px #6e9a38, 0 0 40px #6e9a38;
+  }
+}
+.workspace-section {
+  margin-top: 80px; /* Increased space between navbar and content */
+  text-align: center; /* Center the title */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.workspace-content {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 20px; /* Space between the title and the content */
+}
+
+.workspace-img {
+  width: 250px; /* Set width for the image */
+  height: 250px; /* Set height for the image to make it circular */
+  border-radius: 50%; /* Circular image */
+  margin-right: 20px; /* Space between image and text */
+  border: 5px solid #88A649; /* Green border color */
+}
+
+.workspace-description {
+  max-width: 600px; /* Limit width of the text */
+}
+
+.titre {
+  font-size: 32px; /* Increased font size for prominence */
+  font-weight: bold; /* Make it bold */
+  color: #88A649; /* Match the theme */
+  margin-bottom: 20px; /* Space below the title */
+  width: 100%; /* Ensure it takes full width */
+}
+.contact-details {
+  margin-top: 40px; /* Space above the section */
+  text-align: center; /* Center the title */
+}
+
+.contact-details h2 {
+  color: #6e9a38; /* Green color */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+
+.contact-info {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space items evenly */
+  width: 100%; /* Use full width */
+}
+
+.info-circle {
+  background-color: white; /* Background color of the circle */
+  border: 5px solid #88A649; /* Green border */
+  border-radius: 50%; /* Circular border */
+  padding: 20px; /* Padding inside the circle */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 120px; /* Set fixed width for uniformity */
+  height: 120px; /* Set fixed height for uniformity */
+  text-align: center; /* Center the text */
+}
+
+.info-icon {
+  width: 40px; /* Set width for the icons */
+  height: 40px; /* Set height for the icons */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.contact-info p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+.about-section {
+  margin-top: 80px; /* Adds space between navbar and content */
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.5s ease; /* Smooth animation on hover */
+}
+
+.about-section:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.about-img {
+  width: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: rotate(3deg); /* Small image rotation on hover */
+}
+
+.about-description {
+  max-width: 600px;
+}
+
+.titre {
+  text-align: center;
+  font-size: 36px;
+  color: #6e9a38;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.driving-innovation {
+  text-align: center;
+  font-size: 36px;
+  color: #6e9a38;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.vision-mission-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.vision, .mission {
+  width: 45%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(136, 166, 73, 0.5); /* Green shadow */
+  transition: transform 0.3s ease;
+}
+
+.vision:hover, .mission:hover {
+  transform: scale(1.02);
+}
+
+.vision h3, .mission h3 {
+  font-size: 24px;
+  color: #6e9a38;
+  margin-bottom: 15px;
+}
+
+.vision p, .mission p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.success-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.success-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-item h3 {
+  font-size: 32px;
+  color: #88A649;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.stat-item p {
+  font-size: 18px;
+  color: #333;
+}
+
+.success-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #88A649;
+}
+
+.success-section .title {
+  font-size: 28px;
+  color: #88A649;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .success-content {
+    flex-direction: column;
+  }
+}
+.event-info {
+  padding: 20px;
+  margin-top: 60px; /* Space between the navbar and the content */
+}
+
+.event-title {
+  text-align: center;
+  color: #6e9a38; /* Green color */
+  margin-bottom: 20px;
+  font-size: 24px; /* Adjust font size */
+}
+
+/* Styling for event details */
+.event-details {
+  display: flex; /* Align items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: center; /* Center align items */
+  gap: 20px; /* Space between items */
+  margin-top: 20px; /* Space above details */
+}
+
+.detail-item {
+  background-color: white; /* White background for detail item */
+  border: 2px solid #88A649; /* Green border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the box */
+  width: 150px; /* Fixed width for consistent sizing */
+  text-align: center; /* Center align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effect */
+}
+
+.detail-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+
